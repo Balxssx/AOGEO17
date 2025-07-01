@@ -170,7 +170,7 @@ function Route() {
           <Box sx={{ mt: 2, borderBottom: "1px solid #E5E5E5" }} />
 
           {/* Transport Cards */}
-          <Box sx={{ mt: 6 }}>
+          <Box sx={{ mt: 4 }}>
             <Typography
               sx={{
                 fontSize: { xs: "20px", sm: "24px" },

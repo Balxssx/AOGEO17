@@ -102,7 +102,7 @@ function Route_train() {
           <Box
             sx={{
               width: "100%",
-              height: { xs: 400, sm: 550, md: 600 },
+              height: { xs: 350, sm: 500, md: 550 },
               borderRadius: "16px",
               overflow: "hidden",
               border: "1px solid #ccc",
@@ -138,7 +138,7 @@ function Route_train() {
           <Box
             sx={{
               width: "100%",
-              height: { xs: 400, sm: 550, md: 600 },
+              height: { xs: 350, sm: 500, md: 550 },
               borderRadius: "16px",
               overflow: "hidden",
               border: "1px solid #ccc",

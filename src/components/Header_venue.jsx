@@ -137,7 +137,7 @@ function Header_venue() {
             </Box>
           </Box>
 
-          <Box sx={{ mt: 2, borderBottom: "1px solid #E5E5E5" }} />
+          {/* <Box sx={{ mt: 2, borderBottom: "1px solid #E5E5E5" }} /> */}
 
           {/* Swiper */}
           <Box sx={{ mt: 2, position: "relative" }}>

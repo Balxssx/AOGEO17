@@ -83,7 +83,7 @@ function Rooms() {
           sx={{
             mt: {
               xs: "1rem", // สำหรับหน้าจอเล็ก (xs = <600px)
-              sm: "2rem", // สำหรับหน้าจอปกติขึ้นไป (sm = ≥600px)
+              sm: "1rem", // สำหรับหน้าจอปกติขึ้นไป (sm = ≥600px)
             },
           }}
         >
@@ -139,14 +139,19 @@ function Rooms() {
               mt: 1,
               overflowX: "auto",
               whiteSpace: "nowrap",
-              scrollbarWidth: "none", // สำหรับ Firefox
+              scrollbarWidth: "none", // Firefox
               "&::-webkit-scrollbar": {
-                display: "none", // สำหรับ Chrome, Safari
+                display: "none", // Chrome, Safari
               },
             }}
           >
             <Box
-              sx={{ display: "inline-flex", gap: 1, minWidth: "max-content" }}
+              sx={{
+                display: "inline-flex",
+                gap: 1,
+                minWidth: "max-content",
+                px: 1, // เพิ่ม padding ซ้าย/ขวาเล็กน้อย
+              }}
             >
               {tabs.map((tab) => (
                 <Button
@@ -169,12 +174,13 @@ function Rooms() {
                       activeTab === tab.id
                         ? "linear-gradient(140.64deg, #030304 53.36%, #BA65D4 87.49%)"
                         : "transparent",
-                    color: activeTab === tab.id ? "white" : "#030304",
+                    color: activeTab === tab.id ? "#fff" : "#030304",
+                    transition: "all 0.3s ease",
                     "&:hover": {
                       background:
                         activeTab === tab.id
                           ? "linear-gradient(140.64deg, #030304 53.36%, #BA65D4 87.49%)"
-                          : "rgba(0,0,0,0.04)",
+                          : "rgba(0, 0, 0, 0.04)",
                       border: activeTab === tab.id ? "none" : undefined,
                     },
                   }}

@@ -180,7 +180,7 @@ function ResponsiveAppBar() {
                   textDecoration: "none",
                 }}
               >
-                17th AOGEO Symposium
+                The 17<sup style={{ fontSize: '0.7em' }}>th</sup>  AOGEO Symposium
               </Typography>
             </Box>
 
@@ -212,7 +212,7 @@ function ResponsiveAppBar() {
                           primary={name}
                           primaryTypographyProps={{
                             fontFamily: "Work Sans",
-                            fontSize: "18px",
+                            fontSize: "16px",
                             fontWeight: currentPath === path ? 600 : 400,
                             color: currentPath === path ? "#3C066D" : "#030304",
                           }}
@@ -233,7 +233,7 @@ function ResponsiveAppBar() {
                     className="menu-link"
                     style={{
                       fontFamily: "Work Sans",
-                      fontSize: "18px",
+                      fontSize: "16px",
                       fontWeight: currentPath === path ? 600 : 400,
                       color: currentPath === path ? "#3C066D" : "#030304",
                       textDecoration: "none",
