@@ -47,7 +47,7 @@ function Header_venue() {
   return (
     <>
       <CssBaseline />
-      <Container maxWidth="xl">
+      <Container maxWidth="lg">
         <Box
           sx={{
             mt: {
@@ -136,6 +136,8 @@ function Header_venue() {
               Show on map →
             </Box>
           </Box>
+
+          <Box sx={{ mt: 2, borderBottom: "1px solid #E5E5E5" }} />
 
           {/* Swiper */}
           <Box sx={{ mt: 2, position: "relative" }}>

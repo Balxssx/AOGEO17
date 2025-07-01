@@ -100,7 +100,7 @@ function ResponsiveAppBar() {
           }}
         >
           <Container
-            maxWidth="xl"
+            maxWidth="lg"
             sx={{ display: "flex", alignItems: "center" }}
           >
             <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
@@ -150,7 +150,7 @@ function ResponsiveAppBar() {
           zIndex: (theme) => theme.zIndex.appBar,
         }}
       >
-        <Container maxWidth="xl">
+        <Container maxWidth="lg">
           <Toolbar
             disableGutters
             sx={{ mt: trigger ? "0px" : "50px", transition: "margin-top 0.3s" }}

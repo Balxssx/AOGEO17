@@ -78,13 +78,15 @@ function Rooms() {
   return (
     <>
       <CssBaseline />
-      <Container maxWidth="xl">
-        <Box sx={{
+      <Container maxWidth="lg">
+        <Box
+          sx={{
             mt: {
               xs: "1rem", // สำหรับหน้าจอเล็ก (xs = <600px)
               sm: "2rem", // สำหรับหน้าจอปกติขึ้นไป (sm = ≥600px)
             },
-          }}>
+          }}
+        >
           {/* Title */}
           <Box
             sx={{

@@ -43,7 +43,7 @@ function Route() {
   return (
     <>
       <CssBaseline />
-      <Container maxWidth="xl">
+      <Container maxWidth="lg">
         <Box sx={{
             mt: {
               xs: "1rem", // สำหรับหน้าจอเล็ก (xs = <600px)

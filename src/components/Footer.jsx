@@ -12,7 +12,7 @@ function Footer() {
         pt: 2,
       }}
     >
-      <Container maxWidth="xl">
+      <Container maxWidth="lg">
         <Stack direction="row" spacing={3} alignItems="flex-start">
           {/* Logo + Text block */}
           <Stack spacing={1}>
