@@ -11,6 +11,8 @@ import ThaiPattern from "../assets/images/ThaiPattern.png";
 // ✅ Import Components
 import OnloadingIcon from "./OnloadingIcon.jsx";
 import Route_train from "./Route_train";
+import Route_boat from "./Route_boat";
+import Route_bus from "./Route_bus";
 
 const transportOptions = [
   { type: "Train", detail: "BTS, MRT" },
@@ -44,12 +46,14 @@ function Route() {
     <>
       <CssBaseline />
       <Container maxWidth="lg">
-        <Box sx={{
+        <Box
+          sx={{
             mt: {
               xs: "1rem", // สำหรับหน้าจอเล็ก (xs = <600px)
               sm: "2rem", // สำหรับหน้าจอปกติขึ้นไป (sm = ≥600px)
             },
-          }}>
+          }}
+        >
           {/* Header */}
           <Box
             sx={{
@@ -137,17 +141,6 @@ function Route() {
                     "_blank"
                   )
                 }
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.background =
-                    "linear-gradient(93.63deg, #6D11D8 7.55%, #FEAFD1 127.84%)";
-                  e.currentTarget.style.color = "#ffffff";
-                  e.currentTarget.style.border = "1px solid #030304";
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.background = "white";
-                  e.currentTarget.style.color = "#030304";
-                  e.currentTarget.style.border = "1px solid #030304";
-                }}
                 sx={{
                   padding: { xs: "6px 16px", sm: "10px 24px" },
                   fontSize: { xs: "16px", sm: "18px" },
@@ -156,9 +149,15 @@ function Route() {
                   fontFamily: "Work Sans",
                   fontWeight: 600,
                   background: "white",
-                  cursor: "pointer",
                   color: "#030304",
+                  cursor: "pointer",
                   transition: "all 0.3s ease-in-out",
+                  "&:hover": {
+                    background:
+                      "linear-gradient(63deg, rgb(80, 49, 133) -14.73%, rgb(195, 162, 250) 92.2%)",
+                    color: "#ffffff",
+                    border: "1px solid #ffffff",
+                  },
                 }}
               >
                 Show on map →
@@ -324,12 +323,30 @@ function Route() {
                     Loading...
                   </Typography>
                 </Box>
-                <Box sx={{ mt: 0, borderBottom: "1px solid #E5E5E5" }} />
+                <Box
+                  sx={{ mt: 0, borderBottom: "1px solidrgb(255, 255, 255)" }}
+                />
               </>
             ) : selected === "Train" ? (
               <>
                 <Route_train />
-                <Box sx={{ mt: 6, borderBottom: "1px solid #E5E5E5" }} />
+                <Box
+                  sx={{ mt: 4, borderBottom: "1px solidrgb(255, 255, 255)" }}
+                />
+              </>
+            ) : selected === "Boat" ? (
+              <>
+                <Route_boat />
+                <Box
+                  sx={{ mt: 4, borderBottom: "1px solidrgb(255, 255, 255)" }}
+                />
+              </>
+            ) : selected === "Bus" ? (
+              <>
+                <Route_bus />
+                <Box
+                  sx={{ mt: 4, borderBottom: "1px solidrgb(255, 255, 255)" }}
+                />
               </>
             ) : null}
           </Box>

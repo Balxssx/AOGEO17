@@ -6,10 +6,13 @@ function Footer() {
   return (
     <Box
       sx={{
-        bgcolor: "#fff",
-        color: "#000",
+        background:
+              "linear-gradient(63deg,rgb(80, 49, 133) -14.73%,rgb(195, 162, 250) 92.2%)",
+        color: "#ffffff",   // สีตัวหนังสือ
         fontFamily: "'Work Sans', sans-serif",
-        pt: 2,
+        pt: 4,
+        pb: 2,
+        minHeight: 200, // ปรับความสูงของ footer
       }}
     >
       <Container maxWidth="lg">
@@ -28,7 +31,7 @@ function Footer() {
                 sx={{
                   fontSize: "18px",
                   fontWeight: 600,
-                  color: "#030304",
+                  color: "#ffffff",
                   fontFamily: "Work Sans",
                 }}
               >
@@ -40,8 +43,10 @@ function Footer() {
             <Box>
               <Typography
                 variant="body2"
-                color="text.secondary"
-                sx={{ fontFamily: "Work Sans" }}
+                sx={{
+                  color: "#ffffff",
+                  fontFamily: "Work Sans",
+                }}
               >
                 The 17th AOGEO Symposium Secretariat
                 <br />
@@ -51,8 +56,10 @@ function Footer() {
               <Typography
                 variant="body2"
                 mt={2}
-                color="text.secondary"
-                sx={{ fontFamily: "Work Sans" }}
+                sx={{
+                  color: "#ffffff",
+                  fontFamily: "Work Sans",
+                }}
               >
                 aogeo17@gistda.or.th
               </Typography>
@@ -60,14 +67,14 @@ function Footer() {
           </Stack>
         </Stack>
 
-        <Divider sx={{ my: 2, borderColor: "#E5E5E5" }} />
+        <Divider sx={{ my: 3, borderColor: "rgba(255, 255, 255, 0.3)" }} />
 
         <Typography
           variant="body2"
           align="center"
           sx={{
-            color: "text.secondary",
-            pb: 2,
+            color: "#ffffff",
+            pb: 1,
             fontFamily: "Work Sans",
           }}
         >

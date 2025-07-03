@@ -15,28 +15,39 @@ import {
   DialogContent,
   Fade,
   GlobalStyles,
+  Select,
+  MenuItem,
+  FormControl,
+  InputLabel,
 } from "@mui/material";
 
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
+import KeyboardArrowDownRoundedIcon from "@mui/icons-material/KeyboardArrowDownRounded";
 
 // ✅ รูปทั้งหมด
 import AOGEOIcon from "../assets/images/icon_AOGEO.png";
-import Img1 from "../assets/images/venue/bkkhi-ale-house-01.avif";
-import Img2 from "../assets/images/venue/bkkhi-lifetyle03.avif";
-import Img3 from "../assets/images/venue/bkkhitw-shuttle-boat-hotel-exterior.avif";
+import Img1 from "../assets/images/venue/7.jpg";
+import Img2 from "../assets/images/venue/8.jpg";
+import Img3 from "../assets/images/venue/15.jpg";
+
 import Img4 from "../assets/images/venue/bkkhitw-exterior-sunset.avif";
 import Img5 from "../assets/images/venue/bkkhitw-family-suite-living-04.avif";
 import Img6 from "../assets/images/venue/bkkhitw-king-premium-room-03.avif";
 import Img7 from "../assets/images/venue/bkkhitw-panoramic-executive-suite-living-room.avif";
+
+import Img8 from "../assets/images/venue/5.jpg";
+import Img9 from "../assets/images/venue/6.jpg";
+import Img10 from "../assets/images/venue/1.jpg";
+import Img11 from "../assets/images/venue/2.jpg";
 
 // ✅ โครงสร้างภาพใหม่
 const images = {
   ballroom: [Img1, Img2, Img3],
   breakout: [Img4, Img5, Img3],
   secretariat: [Img6],
-  reception: [Img7, Img3],
+  reception: [Img8, Img9, Img10, Img11],
 };
 
 function Rooms() {
@@ -53,7 +64,7 @@ function Rooms() {
   ];
 
   const roomDetails = {
-    ballroom: { name: "Grand Ballroom and Foyer", floor: "1st Floor" },
+    ballroom: { name: "Grand Ballroom and Foyer", floor: "Level 2" },
     breakout: {
       name: "Breakout Rooms and Coffee Break Area",
       floor: "2nd Floor",
@@ -78,15 +89,40 @@ function Rooms() {
   return (
     <>
       <CssBaseline />
-      <Container maxWidth="lg">
-        <Box
-          sx={{
-            mt: {
-              xs: "1rem", // สำหรับหน้าจอเล็ก (xs = <600px)
-              sm: "1rem", // สำหรับหน้าจอปกติขึ้นไป (sm = ≥600px)
+      <GlobalStyles
+        styles={{
+          ".swiper": {
+            scrollbarWidth: "none",
+            "&::-webkit-scrollbar": {
+              display: "none",
             },
-          }}
-        >
+          },
+          ".swiper-pagination": {
+            bottom: "16px",
+            textAlign: "center",
+            width: "100%",
+            position: "absolute",
+            zIndex: 2,
+          },
+          ".swiper-pagination-bullet": {
+            backgroundColor: "#ffffff",
+            opacity: 0.5,
+            width: "7px",
+            height: "7px",
+            margin: "0 3px",
+            borderRadius: "50%",
+            transition: "all 0.2s ease-in-out",
+          },
+          ".swiper-pagination-bullet-active": {
+            backgroundColor: "#ffffff",
+            opacity: 1,
+            transform: "scale(1.2)",
+          },
+        }}
+      />
+
+      <Container maxWidth="lg" sx={{ overflow: "visible" }}>
+        <Box sx={{ mt: { xs: "1rem", sm: "1rem" } }}>
           {/* Title */}
           <Box
             sx={{
@@ -133,92 +169,72 @@ function Rooms() {
             </Box>
           </Box>
 
-          {/* Tabs */}
-          <Box
-            sx={{
-              mt: 1,
-              overflowX: "auto",
-              whiteSpace: "nowrap",
-              scrollbarWidth: "none", // Firefox
-              "&::-webkit-scrollbar": {
-                display: "none", // Chrome, Safari
-              },
-            }}
-          >
-            <Box
-              sx={{
-                display: "inline-flex",
-                gap: 1,
-                minWidth: "max-content",
-                px: 1, // เพิ่ม padding ซ้าย/ขวาเล็กน้อย
-              }}
-            >
-              {tabs.map((tab) => (
-                <Button
-                  key={tab.id}
-                  onClick={() => setActiveTab(tab.id)}
-                  variant="outlined"
-                  sx={{
-                    whiteSpace: "nowrap",
-                    borderRadius: "999px",
-                    px: 2,
-                    py: 0.5,
-                    fontFamily: "Work Sans, sans-serif",
-                    fontWeight: 500,
-                    fontSize: "14px",
-                    border:
-                      activeTab === tab.id
-                        ? "none"
-                        : "1px solid rgba(0, 0, 0, 0.2)",
-                    background:
-                      activeTab === tab.id
-                        ? "linear-gradient(140.64deg, #030304 53.36%, #BA65D4 87.49%)"
-                        : "transparent",
-                    color: activeTab === tab.id ? "#fff" : "#030304",
-                    transition: "all 0.3s ease",
-                    "&:hover": {
-                      background:
-                        activeTab === tab.id
-                          ? "linear-gradient(140.64deg, #030304 53.36%, #BA65D4 87.49%)"
-                          : "rgba(0, 0, 0, 0.04)",
-                      border: activeTab === tab.id ? "none" : undefined,
+          <Box sx={{ mt: 0, width: { xs: "100%", md: 350 } }}>
+            <FormControl fullWidth>
+              <Select
+                value={activeTab}
+                onChange={(e) => setActiveTab(e.target.value)}
+                displayEmpty
+                IconComponent={KeyboardArrowDownRoundedIcon}
+                sx={{
+                  fontSize: { xs: "16px", sm: "16px" },
+                  borderRadius: "25px",
+                  border: "1px solid #030304",
+                  fontFamily: "Work Sans, sans-serif",
+                  fontWeight: 600,
+                  background: "white",
+                  cursor: "pointer",
+                  color: "#030304",
+                  transition: "all 0.3s ease-in-out",
+                  minHeight: "42px",
+                  "& .MuiSelect-icon": {
+                    color: "#030304",
+                  },
+                  "& .MuiOutlinedInput-notchedOutline": {
+                    border: "none",
+                  },
+                }}
+                inputProps={{
+                  sx: {
+                    py: "4px",
+                  },
+                }}
+                MenuProps={{
+                  PaperProps: {
+                    sx: {
+                      borderRadius: "16px",
+                      border: "1px solid #030304",
+                      mt: 1, // ระยะห่างจาก input
+                      boxShadow: "0px 4px 20px rgba(0, 0, 0, 0.08)",
                     },
-                  }}
-                >
-                  {tab.label}
-                </Button>
-              ))}
-            </Box>
+                  },
+                }}
+              >
+                {tabs.map((tab) => (
+                  <MenuItem
+                    key={tab.id}
+                    value={tab.id}
+                    sx={{
+                      fontFamily: "Work Sans, sans-serif",
+                      fontWeight: 500,
+                      fontSize: "14px",
+                      "&.Mui-selected": {
+                        backgroundColor: "#F3E8FF", // ม่วงอ่อน
+                      },
+                      "&.Mui-selected:hover": {
+                        backgroundColor: "#E9D5FF", // ม่วง hover อ่อนกว่า
+                      },
+                    }}
+                  >
+                    {tab.label}
+                  </MenuItem>
+                ))}
+              </Select>
+            </FormControl>
           </Box>
 
           {/* Swiper Gallery */}
           <Box sx={{ mt: 2, position: "relative" }}>
-            <GlobalStyles
-              styles={{
-                ".swiper-pagination": {
-                  bottom: "16px",
-                  textAlign: "center",
-                  width: "100%",
-                  position: "absolute",
-                  zIndex: 2,
-                },
-                ".swiper-pagination-bullet": {
-                  backgroundColor: "#ffffff",
-                  opacity: 0.5,
-                  width: "7px",
-                  height: "7px",
-                  margin: "0 3px",
-                  borderRadius: "50%",
-                  transition: "all 0.2s ease-in-out",
-                },
-                ".swiper-pagination-bullet-active": {
-                  backgroundColor: "#ffffff",
-                  opacity: 1,
-                  transform: "scale(1.2)",
-                },
-              }}
-            />
-
             <Swiper
               modules={[Pagination]}
               pagination={{ clickable: true }}
@@ -249,7 +265,7 @@ function Rooms() {
                         borderRadius: 5,
                         "@media (max-width: 600px)": {
                           height: "auto",
-                          aspectRatio: "16 / 9",
+                          aspectRatio: "4 / 3",
                         },
                       }}
                     />
@@ -321,7 +337,7 @@ function Rooms() {
             </Box>
           </Box>
 
-          <Box sx={{ mt: 4, borderBottom: "1px solid #E5E5E5" }} />
+          <Box sx={{ mt: 4, borderBottom: "1px solidrgb(255, 255, 255)" }} />
         </Box>
       </Container>
 

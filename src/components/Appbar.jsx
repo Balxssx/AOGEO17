@@ -16,7 +16,7 @@ import {
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { Link, useLocation } from "react-router-dom";
-import GEOLogo from "../assets/images/GEO_logo.png";
+import GEOLogo from "../assets/images/GEO_logo.svg";
 import AOGEOLogo from "../assets/images/AOGEO_logo.png";
 import AOGEOIcon from "../assets/images/icon_AOGEO.png";
 
@@ -88,10 +88,10 @@ function ResponsiveAppBar() {
         <Box
           sx={{
             height: "50px",
-            backgroundColor: "#fafafa",
+            background:
+              "linear-gradient(63deg,rgb(80, 49, 133) -14.73%,rgb(208, 181, 255) 92.2%)",
             display: "flex",
             alignItems: "center",
-            px: 2,
             position: "fixed",
             top: 0,
             left: 0,
@@ -114,7 +114,7 @@ function ResponsiveAppBar() {
                   src={GEOLogo}
                   alt="GEO Logo"
                   sx={{
-                    height: { xs: 16, sm: 20, md: 25 },
+                    height: { xs: 18, sm: 22, md: 28 },
                     width: "auto",
                   }}
                 />
@@ -180,7 +180,7 @@ function ResponsiveAppBar() {
                   textDecoration: "none",
                 }}
               >
-                The 17<sup style={{ fontSize: '0.7em' }}>th</sup>  AOGEO Symposium
+                17th AOGEO Symposium
               </Typography>
             </Box>
 

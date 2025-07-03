@@ -19,15 +19,37 @@ import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
 
 import AOGEOIcon from "../assets/images/icon_AOGEO.png";
-import Img1 from "../assets/images/venue/bkkhi-ale-house-01.avif";
-import Img2 from "../assets/images/venue/bkkhi-lifetyle03.avif";
-import Img3 from "../assets/images/venue/bkkhitw-exterior-sunset.avif";
-import Img4 from "../assets/images/venue/bkkhitw-family-suite-living-04.avif";
-import Img5 from "../assets/images/venue/bkkhitw-king-premium-room-03.avif";
-import Img6 from "../assets/images/venue/bkkhitw-panoramic-executive-suite-living-room.avif";
-import Img7 from "../assets/images/venue/bkkhitw-shuttle-boat-hotel-exterior.avif";
+import Img1 from "../assets/images/venue/3.jpg";
+import Img2 from "../assets/images/venue/2.jpg";
+import Img3 from "../assets/images/venue/1.jpg";
+import Img4 from "../assets/images/venue/4.jpg";
+import Img5 from "../assets/images/venue/5.jpg";
+import Img6 from "../assets/images/venue/6.jpg";
+import Img7 from "../assets/images/venue/7.jpg";
+import Img8 from "../assets/images/venue/8.jpg";
+import Img9 from "../assets/images/venue/9.jpg";
+import Img10 from "../assets/images/venue/10.jpg";
+import Img11 from "../assets/images/venue/11.jpg";
+import Img12 from "../assets/images/venue/12.jpg";
+import Img13 from "../assets/images/venue/13.png";
+import Img14 from "../assets/images/venue/14.jpg";
 
-const images = [Img1, Img2, Img3, Img4, Img5, Img6, Img7];
+const images = [
+  Img1,
+  Img2,
+  Img3,
+  Img4,
+  Img5,
+  Img6,
+  Img7,
+  Img8,
+  Img9,
+  Img10,
+  Img11,
+  Img12,
+  Img13,
+  Img14,
+];
 
 function Header_venue() {
   const swiperRef = useRef(null);
@@ -51,12 +73,11 @@ function Header_venue() {
         <Box
           sx={{
             mt: {
-              xs: "1rem", // สำหรับหน้าจอเล็ก (xs = <600px)
-              sm: "2rem", // สำหรับหน้าจอปกติขึ้นไป (sm = ≥600px)
+              xs: "1rem",
+              sm: "2rem",
             },
           }}
         >
-          {/* Title and logo */}
           <Box
             sx={{
               display: "flex",
@@ -81,7 +102,6 @@ function Header_venue() {
               >
                 Venue
               </Typography>
-
               <Box
                 component="img"
                 src={AOGEOIcon}
@@ -101,45 +121,39 @@ function Header_venue() {
               />
             </Box>
 
-            <Box
-              component="button"
-              onClick={() =>
-                window.open(
-                  "https://www.google.com/maps?q=Millennium+Hilton+Bangkok",
-                  "_blank"
-                )
-              }
-              onMouseEnter={(e) => {
-                e.currentTarget.style.background =
-                  "linear-gradient(93.63deg, #6D11D8 7.55%, #FEAFD1 127.84%)";
-                e.currentTarget.style.color = "#ffffff";
-                e.currentTarget.style.border = "1px solid #030304";
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.background = "white";
-                e.currentTarget.style.color = "#030304";
-                e.currentTarget.style.border = "1px solid #030304";
-              }}
-              sx={{
-                padding: { xs: "6px 16px", sm: "10px 24px" },
-                fontSize: { xs: "16px", sm: "18px" },
-                borderRadius: "25px",
-                border: "1px solid #030304",
-                fontFamily: "Work Sans, sans-serif",
-                fontWeight: 600,
-                background: "white",
-                cursor: "pointer",
-                color: "#030304",
-                transition: "all 0.3s ease-in-out",
-              }}
-            >
-              Show on map →
+            <Box sx={{ display: "flex", gap: 1 }}>
+              <Box
+                component="button"
+                onClick={() =>
+                  window.open(
+                    "https://www.google.com/maps?q=Millennium+Hilton+Bangkok",
+                    "_blank"
+                  )
+                }
+                sx={{
+                  padding: { xs: "6px 16px", sm: "10px 24px" },
+                  fontSize: { xs: "16px", sm: "18px" },
+                  borderRadius: "25px",
+                  border: "1px solid #030304",
+                  fontFamily: "Work Sans",
+                  fontWeight: 600,
+                  background: "white",
+                  color: "#030304",
+                  cursor: "pointer",
+                  transition: "all 0.3s ease-in-out",
+                  "&:hover": {
+                    background:
+                      "linear-gradient(63deg, rgb(80, 49, 133) -14.73%, rgb(195, 162, 250) 92.2%)",
+                    color: "#ffffff",
+                    border: "1px solid #ffffff",
+                  },
+                }}
+              >
+                Show on map →
+              </Box>
             </Box>
           </Box>
 
-          {/* <Box sx={{ mt: 2, borderBottom: "1px solid #E5E5E5" }} /> */}
-
-          {/* Swiper */}
           <Box sx={{ mt: 2, position: "relative" }}>
             <GlobalStyles
               styles={{
@@ -199,7 +213,7 @@ function Header_venue() {
                         borderRadius: 5,
                         "@media (max-width: 600px)": {
                           height: "auto",
-                          aspectRatio: "16 / 9",
+                          aspectRatio: "4 / 3",
                         },
                       }}
                     />
@@ -209,23 +223,49 @@ function Header_venue() {
             </Swiper>
           </Box>
 
-          {/* Controls + Details */}
           <Box
             sx={{
               mt: 2,
               display: "flex",
-              flexDirection: { xs: "column", md: "row" },
-              justifyContent: "space-between",
+              flexDirection: { xs: "column-reverse", md: "row" },
               alignItems: { xs: "flex-start", md: "center" },
-              flexWrap: "wrap",
               gap: 2,
             }}
           >
+            {/* โรงแรม */}
+            <Box
+              sx={{
+                width: "100%",
+                textAlign: { xs: "center", md: "left" },
+              }}
+            >
+              <Typography
+                variant="h6"
+                sx={{
+                  fontWeight: 600,
+                  fontFamily: "Work Sans, sans-serif",
+                  color: "#030304",
+                }}
+              >
+                Millennium Hilton Bangkok
+              </Typography>
+              <Typography
+                sx={{
+                  fontFamily: "Work Sans, sans-serif",
+                  fontSize: "16px",
+                }}
+                color="text.secondary"
+              >
+                123 Charoennakorn Road, Klongsan, Bangkok, 10600, Thailand
+              </Typography>
+            </Box>
+
+            {/* ปุ่มควบคุม */}
             <Box
               sx={{
                 display: { xs: "none", md: "flex" },
                 gap: 1,
-                order: 2,
+                ml: "auto",
               }}
             >
               <IconButton
@@ -255,25 +295,83 @@ function Header_venue() {
                 <ArrowForwardIosIcon />
               </IconButton>
             </Box>
+          </Box>
 
-            <Box sx={{ order: { xs: 2, md: 1 } }}>
-              <Typography
-                variant="h6"
-                sx={{
+          <Box sx={{ mt: 4, borderBottom: "1px solid #E5E5E5" }} />
+
+          <Box sx={{ mt: 4 }}>
+            <Typography
+              sx={{
+                fontWeight: 600,
+                fontFamily: "Work Sans, sans-serif",
+                fontSize: "18px",
+                color: "#030304",
+                mb: 1,
+              }}
+            >
+              Terms & Conditions
+            </Typography>
+            <Box
+              component="ul"
+              sx={{
+                fontFamily: "Work Sans, sans-serif",
+                color: "#4B5563",
+                lineHeight: 1.6,
+                fontSize: "16px",
+                mt: 1,
+              }}
+            >
+              <li>
+                20% Discount on Best Available Rate with breakfast at Deluxe
+                Room type
+              </li>
+              <li>
+                50% Deposit payment is required upon booking, non-refundable
+              </li>
+              <li>
+                The outstanding balance will be charged upon departure to the
+                provided credit card
+              </li>
+              <li>50% cancellation fee is applied upon booking</li>
+              <li>100% cancellation fee 21 days prior to arrival</li>
+              <li>100% No-show charge</li>
+            </Box>
+          </Box>
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: { xs: "center", sm: "flex-start" },
+              mt: 3,
+            }}
+          >
+            <Box
+              component="button"
+              onClick={() =>
+                window.open(
+                  "https://www.hilton.com/en/hotels/bkkhitw-millennium-hilton-bangkok/?WT.mc_id=zPADA0TH1HI2PSH3paid_ggl4DOMBPP_Apr5SiteGGL_ObjROAS_TacBPP_TarKeyword_SMTH_FrmtRSAs_CrNText_DvceAll_LPOHW6BKKHITW7EN8acctid=700000002399000-campid=71700000093094233-adgrpid=58700007775465217&&&&&gad_source=1&gad_campaignid=16821069814&gbraid=0AAAAADnjLGO-83FiNtvbGS7I6albx9Ext&gclid=CjwKCAjwsZPDBhBWEiwADuO6y-H5zOCPQ8xRYIAq02kF40DDCjyLO99OMbZ52McQ6oIOHPTvpQyrfBoC3poQAvD_BwE&gclsrc=aw.ds",
+                  "_blank"
+                )
+              }
+              sx={{
+                  padding: { xs: "6px 16px", sm: "10px 24px" },
+                  fontSize: { xs: "16px", sm: "18px" },
+                  borderRadius: "25px",
+                  border: "1px solid #030304",
+                  fontFamily: "Work Sans",
                   fontWeight: 600,
-                  fontFamily: "Work Sans, sans-serif",
+                  background: "white",
                   color: "#030304",
+                  cursor: "pointer",
+                  transition: "all 0.3s ease-in-out",
+                  "&:hover": {
+                    background:
+                      "linear-gradient(63deg, rgb(80, 49, 133) -14.73%, rgb(195, 162, 250) 92.2%)",
+                    color: "#ffffff",
+                    border: "1px solid #ffffff",
+                  },
                 }}
-              >
-                Millennium Hilton Bangkok
-              </Typography>
-              <Typography
-                variant="body1"
-                sx={{ fontFamily: "Work Sans, sans-serif" }}
-                color="text.secondary"
-              >
-                123 Charoennakorn Road, Klongsan, Bangkok, 10600, Thailand
-              </Typography>
+            >
+              Booking now →
             </Box>
           </Box>
 
@@ -281,7 +379,6 @@ function Header_venue() {
         </Box>
       </Container>
 
-      {/* Fullscreen Image Dialog */}
       <Dialog
         open={openDialog}
         onClose={handleCloseImage}
