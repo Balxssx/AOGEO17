@@ -51,7 +51,7 @@ function Route_bus() {
         <Box
           sx={{
             width: "100%",
-            height: { xs: 350, sm: 500, md: 600 },
+            height: { xs: 450, sm: 550, md: 650 },
             borderRadius: "16px",
             overflow: "hidden",
             border: "1px solid #ccc",

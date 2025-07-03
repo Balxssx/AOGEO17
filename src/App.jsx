@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-// import Home from './pages/Home'
+import Home from './pages/Home'
 import Venue from './pages/Venue'
 // import Agenda from './pages/Agenda'
 import Access from './pages/Access'
@@ -11,7 +11,7 @@ function App() {
     <Router>
       <Appbar/>
       <Routes>
-        {/* <Route path="/" element={<Home />} /> */}
+        <Route path="/" element={<Home />} />
         <Route path="/venue" element={<Venue />} />
         <Route path="/access" element={<Access />} />
         <Route path="/travel" element={<Travel />} />

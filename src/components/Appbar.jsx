@@ -114,7 +114,7 @@ function ResponsiveAppBar() {
                   src={GEOLogo}
                   alt="GEO Logo"
                   sx={{
-                    height: { xs: 18, sm: 22, md: 28 },
+                    height: { xs: 22, sm: 24, md: 28 },
                     width: "auto",
                   }}
                 />

@@ -11,6 +11,7 @@ import {
 import CloseIcon from "@mui/icons-material/Close";
 import ProfileCard from "./ProfileCard";
 
+
 import AOGEOIcon from "../assets/images/icon_AOGEO.png";
 import ExpoImage from "../assets/images/spaceexpo2025.png";
 import WatArunImg from "../assets/images/WatArunImg.png";
@@ -239,7 +240,7 @@ function TravelInfo() {
                 </Box>
               </Box>
 
-              <Box sx={{ mt: 4, borderBottom: "1px solidrgb(255, 255, 255)" }} />
+              <Box sx={{ mt: 4, borderBottom: "1px solid #e5e5e5" }} />
             </Box>
           ))}
 

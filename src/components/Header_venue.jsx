@@ -17,6 +17,12 @@ import {
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
+import CheckCircleIcon from "@mui/icons-material/CheckCircle";
+import CreditCardIcon from "@mui/icons-material/CreditCard";
+import CancelIcon from "@mui/icons-material/Cancel";
+import AlarmOnIcon from "@mui/icons-material/AlarmOn";
+import BlockIcon from "@mui/icons-material/Block";
+import ErrorOutlineIcon from "@mui/icons-material/ErrorOutline";
 
 import AOGEOIcon from "../assets/images/icon_AOGEO.png";
 import Img1 from "../assets/images/venue/3.jpg";
@@ -65,6 +71,33 @@ function Header_venue() {
     setOpenDialog(false);
     setSelectedImage("");
   };
+
+  const terms = [
+    {
+      icon: <CheckCircleIcon sx={{ fontSize: 36, color: "#6D11D8" }} />,
+      text: "20% Discount on Best Available Rate with breakfast at Deluxe Room type",
+    },
+    {
+      icon: <CreditCardIcon sx={{ fontSize: 36, color: "#6D11D8" }} />,
+      text: "50% Deposit payment is required upon booking, non-refundable",
+    },
+    {
+      icon: <CreditCardIcon sx={{ fontSize: 36, color: "#6D11D8" }} />,
+      text: "The outstanding balance will be charged upon departure to the provided credit card",
+    },
+    {
+      icon: <CancelIcon sx={{ fontSize: 36, color: "#E53935" }} />,
+      text: "50% cancellation fee is applied upon booking",
+    },
+    {
+      icon: <AlarmOnIcon sx={{ fontSize: 36, color: "#F9A825" }} />,
+      text: "100% cancellation fee 21 days prior to arrival",
+    },
+    {
+      icon: <BlockIcon sx={{ fontSize: 36, color: "#D32F2F" }} />,
+      text: "100% No-show charge",
+    },
+  ];
 
   return (
     <>
@@ -299,44 +332,79 @@ function Header_venue() {
 
           <Box sx={{ mt: 4, borderBottom: "1px solid #E5E5E5" }} />
 
-          <Box sx={{ mt: 4 }}>
+          <Box
+            sx={{
+              mt: 4,
+              px: 3,
+              py: 3,
+              backgroundColor: "#F3F6F9",
+              borderRadius: "16px",
+              border: "1px solid #E0E0E0",
+            }}
+          >
             <Typography
+              variant="h6"
               sx={{
                 fontWeight: 600,
                 fontFamily: "Work Sans, sans-serif",
-                fontSize: "18px",
+                fontSize: { xs: 18, md: 20 },
                 color: "#030304",
-                mb: 1,
+                mb: 2,
+                textAlign: "center",
               }}
             >
               Terms & Conditions
             </Typography>
+
             <Box
               component="ul"
               sx={{
+                listStyle: "none",
+                pl: 0,
                 fontFamily: "Work Sans, sans-serif",
                 color: "#4B5563",
-                lineHeight: 1.6,
-                fontSize: "16px",
-                mt: 1,
+                fontSize: 15,
+                lineHeight: 1.8,
+                display: "flex",
+                flexDirection: "column",
+                gap: 1,
               }}
             >
-              <li>
-                20% Discount on Best Available Rate with breakfast at Deluxe
-                Room type
-              </li>
-              <li>
-                50% Deposit payment is required upon booking, non-refundable
-              </li>
-              <li>
-                The outstanding balance will be charged upon departure to the
-                provided credit card
-              </li>
-              <li>50% cancellation fee is applied upon booking</li>
-              <li>100% cancellation fee 21 days prior to arrival</li>
-              <li>100% No-show charge</li>
+              {[
+                "20% Discount on Best Available Rate with breakfast at Deluxe Room type",
+                "50% Deposit payment is required upon booking, non-refundable",
+                "The outstanding balance will be charged upon departure to the provided credit card",
+                "50% cancellation fee is applied upon booking",
+                "100% cancellation fee 21 days prior to arrival",
+                "100% No-show charge",
+              ].map((text, index) => (
+                <Box
+                  component="li"
+                  key={index}
+                  sx={{
+                    display: "flex",
+                    alignItems: "flex-start",
+                    gap: 1.2,
+                  }}
+                >
+                  <Box
+                    sx={{
+                      mt: "6px",
+                      width: 8,
+                      height: 8,
+                      backgroundColor: "#6D11D8",
+                      borderRadius: "50%",
+                      flexShrink: 0,
+                    }}
+                  />
+                  <Typography component="span" sx={{ flex: 1 }}>
+                    {text}
+                  </Typography>
+                </Box>
+              ))}
             </Box>
           </Box>
+
           <Box
             sx={{
               display: "flex",
@@ -353,23 +421,23 @@ function Header_venue() {
                 )
               }
               sx={{
-                  padding: { xs: "6px 16px", sm: "10px 24px" },
-                  fontSize: { xs: "16px", sm: "18px" },
-                  borderRadius: "25px",
-                  border: "1px solid #030304",
-                  fontFamily: "Work Sans",
-                  fontWeight: 600,
-                  background: "white",
-                  color: "#030304",
-                  cursor: "pointer",
-                  transition: "all 0.3s ease-in-out",
-                  "&:hover": {
-                    background:
-                      "linear-gradient(63deg, rgb(80, 49, 133) -14.73%, rgb(195, 162, 250) 92.2%)",
-                    color: "#ffffff",
-                    border: "1px solid #ffffff",
-                  },
-                }}
+                padding: { xs: "6px 16px", sm: "10px 24px" },
+                fontSize: { xs: "16px", sm: "18px" },
+                borderRadius: "25px",
+                border: "1px solid #030304",
+                fontFamily: "Work Sans",
+                fontWeight: 600,
+                background: "white",
+                color: "#030304",
+                cursor: "pointer",
+                transition: "all 0.3s ease-in-out",
+                "&:hover": {
+                  background:
+                    "linear-gradient(63deg, rgb(80, 49, 133) -14.73%, rgb(195, 162, 250) 92.2%)",
+                  color: "#ffffff",
+                  border: "1px solid #ffffff",
+                },
+              }}
             >
               Booking now →
             </Box>
