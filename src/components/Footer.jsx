@@ -7,8 +7,8 @@ function Footer() {
     <Box
       sx={{
         background:
-              "linear-gradient(63deg,rgb(80, 49, 133) -14.73%,rgb(195, 162, 250) 92.2%)",
-        color: "#ffffff",   // สีตัวหนังสือ
+          "linear-gradient(63deg,rgb(80, 49, 133) -14.73%,rgb(195, 162, 250) 92.2%)",
+        color: "#ffffff", // สีตัวหนังสือ
         fontFamily: "'Work Sans', sans-serif",
         pt: 4,
         pb: 2,
@@ -53,16 +53,27 @@ function Footer() {
                 Geo-Informatics and Space Technology Development Agency (Public
                 Organization)
               </Typography>
-              <Typography
-                variant="body2"
-                mt={2}
+              <Box
+                component="a"
+                href="mailto:aogeo17@gistda.or.th"
                 sx={{
-                  color: "#ffffff",
-                  fontFamily: "Work Sans",
+                  textDecoration: "none",
                 }}
               >
-                aogeo17@gistda.or.th
-              </Typography>
+                <Typography
+                  variant="body2"
+                  mt={2}
+                  sx={{
+                    color: "#ffffff",
+                    fontFamily: "Work Sans",
+                    display: "flex",
+                    alignItems: "center",
+                    gap: 1,
+                  }}
+                >
+                  aogeo17@gistda.or.th
+                </Typography>
+              </Box>
             </Box>
           </Stack>
         </Stack>
