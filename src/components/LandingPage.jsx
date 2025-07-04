@@ -90,6 +90,11 @@ function LandingPage() {
                 borderRadius: "999px",
                 overflow: "hidden",
                 backgroundColor: "rgb(121, 87, 179)",
+                transition: "transform 0.3s ease, box-shadow 0.3s ease",
+                "&:hover": {
+                  transform: "scale(1.025)",
+                  boxShadow: "0 8px 20px rgba(0,0,0,0.2)",
+                },
                 "&::before": {
                   content: '""',
                   position: "absolute",

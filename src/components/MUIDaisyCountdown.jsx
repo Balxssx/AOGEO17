@@ -70,8 +70,8 @@ function MUIDaisyCountdown() {
   return (
     <Box
       sx={{
-        backdropFilter: "blur(15px)",
-        backgroundColor: "rgba(255, 255, 255, 0.76)",
+        backdropFilter: "blur(20px)",
+        backgroundColor: "rgba(255, 255, 255, 0.75)",
         borderRadius: "36px",
         px: { xs: 2, sm: 4 },
         py: { xs: 2, sm: 3 },
