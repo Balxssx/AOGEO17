@@ -16,7 +16,7 @@ import { stepConnectorClasses } from "@mui/material/StepConnector";
 // โลโก้
 import arlLogo from "../assets/logos/ARLbangkok.png";
 import btsLogo from "../assets/logos/BTS-Logo.png";
-import mrtLogo from "../assets/logos/MRT_Logo.png";
+import mrtLogo from "../assets/logos/MRT_logo.png";
 
 // ข้อมูลสถานี
 const steps = [
