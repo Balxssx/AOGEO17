@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Box, Container, Typography, Stack } from "@mui/material";
 import AOGEO17Logo from "../assets/images/AOGEO17Logo.png";
 import LandingPageCover from "../assets/images/LandingPageCover.png";
