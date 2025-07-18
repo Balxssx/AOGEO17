@@ -102,7 +102,7 @@ function Route_train() {
           <Box
             sx={{
               width: "100%",
-              height: { xs: 350, sm: 500, md: 550 },
+              height: { xs: 500, sm: 500, md: 550 },
               borderRadius: "16px",
               overflow: "hidden",
               border: "1px solid #ccc",
@@ -138,7 +138,7 @@ function Route_train() {
           <Box
             sx={{
               width: "100%",
-              height: { xs: 350, sm: 500, md: 550 },
+              height: { xs: 500, sm: 500, md: 550 },
               borderRadius: "16px",
               overflow: "hidden",
               border: "1px solid #ccc",
@@ -147,7 +147,7 @@ function Route_train() {
           >
             <iframe
               title="MRT Route Map"
-              src="https://metro.bemplc.co.th/MetroStation"
+              src="https://metro.bemplc.co.th/Fare-Calculation"
               width="100%"
               height="100%"
               style={{ border: "none" }}
