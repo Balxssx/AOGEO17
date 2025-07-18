@@ -36,7 +36,7 @@ import Img8 from "../assets/images/venue/8.jpg";
 import Img9 from "../assets/images/venue/9.jpg";
 import Img10 from "../assets/images/venue/10.jpg";
 import Img11 from "../assets/images/venue/11.jpg";
-import Img12 from "../assets/images/venue/12.jpg";
+// import Img12 from "../assets/images/venue/12.jpg";
 import Img13 from "../assets/images/venue/13.png";
 import Img14 from "../assets/images/venue/14.jpg";
 
@@ -52,7 +52,6 @@ const images = [
   Img9,
   Img10,
   Img11,
-  Img12,
   Img13,
   Img14,
 ];
