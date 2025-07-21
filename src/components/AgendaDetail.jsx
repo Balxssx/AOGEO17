@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
-import LandingPageCover from "../assets/images/LandingPageCover.png";
+import LandingPageCover from "../assets/images/LandingPageCover.webp";
 
 import AOGEOIcon from "../assets/images/icon_AOGEO.png";
 
