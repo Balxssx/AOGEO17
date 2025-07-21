@@ -25,20 +25,20 @@ import BlockIcon from "@mui/icons-material/Block";
 import ErrorOutlineIcon from "@mui/icons-material/ErrorOutline";
 
 import AOGEOIcon from "../assets/images/icon_AOGEO.png";
-import Img1 from "../assets/images/venue/3.jpg";
-import Img2 from "../assets/images/venue/2.jpg";
-import Img3 from "../assets/images/venue/1.jpg";
-import Img4 from "../assets/images/venue/4.jpg";
-import Img5 from "../assets/images/venue/5.jpg";
-import Img6 from "../assets/images/venue/6.jpg";
-import Img7 from "../assets/images/venue/7.jpg";
-import Img8 from "../assets/images/venue/8.jpg";
-import Img9 from "../assets/images/venue/9.jpg";
-import Img10 from "../assets/images/venue/10.jpg";
-import Img11 from "../assets/images/venue/11.jpg";
-// import Img12 from "../assets/images/venue/12.jpg";
-import Img13 from "../assets/images/venue/13.png";
-import Img14 from "../assets/images/venue/14.jpg";
+import Img1 from "../assets/images/venue/3.webp";
+import Img2 from "../assets/images/venue/2.webp";
+import Img3 from "../assets/images/venue/1.webp";
+import Img4 from "../assets/images/venue/4.webp";
+import Img5 from "../assets/images/venue/5.webp";
+import Img6 from "../assets/images/venue/6.webp";
+import Img7 from "../assets/images/venue/7.webp";
+import Img8 from "../assets/images/venue/8.webp";
+import Img9 from "../assets/images/venue/9.webp";
+import Img10 from "../assets/images/venue/10.webp";
+import Img11 from "../assets/images/venue/11.webp";
+import Img12 from "../assets/images/venue/12.webp";
+import Img13 from "../assets/images/venue/13.webp";
+import Img14 from "../assets/images/venue/14.webp";
 
 const images = [
   Img1,
@@ -52,6 +52,7 @@ const images = [
   Img9,
   Img10,
   Img11,
+  Img12,
   Img13,
   Img14,
 ];

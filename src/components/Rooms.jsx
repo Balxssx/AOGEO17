@@ -28,25 +28,25 @@ import KeyboardArrowDownRoundedIcon from "@mui/icons-material/KeyboardArrowDownR
 
 // ✅ รูปทั้งหมด
 import AOGEOIcon from "../assets/images/icon_AOGEO.png";
-import Img1 from "../assets/images/venue/7.jpg";
-import Img2 from "../assets/images/venue/8.jpg";
-import Img3 from "../assets/images/venue/15.jpg";
+import Img1 from "../assets/images/venue/7.webp";
+import Img2 from "../assets/images/venue/8.webp";
+import Img3 from "../assets/images/venue/15.webp";
 
-import Img4 from "../assets/images/venue/bkkhitw-exterior-sunset.avif";
-import Img5 from "../assets/images/venue/bkkhitw-family-suite-living-04.avif";
-import Img6 from "../assets/images/venue/bkkhitw-king-premium-room-03.avif";
-import Img7 from "../assets/images/venue/bkkhitw-panoramic-executive-suite-living-room.avif";
+import Img4 from "../assets/images/venue/17.jpg";
+import Img5 from "../assets/images/venue/18.jpg";
+import Img6 from "../assets/images/venue/19.webp";
+import Img7 from "../assets/images/venue/15.webp";
 
-import Img8 from "../assets/images/venue/5.jpg";
-import Img9 from "../assets/images/venue/6.jpg";
-import Img10 from "../assets/images/venue/1.jpg";
-import Img11 from "../assets/images/venue/2.jpg";
+import Img8 from "../assets/images/venue/5.webp";
+import Img9 from "../assets/images/venue/6.webp";
+import Img10 from "../assets/images/venue/1.webp";
+import Img11 from "../assets/images/venue/2.webp";
 
 // ✅ โครงสร้างภาพใหม่
 const images = {
   ballroom: [Img1, Img2, Img3],
-  breakout: [Img4, Img5, Img3],
-  secretariat: [Img6],
+  breakout: [Img4, Img5, Img6],
+  // secretariat: [Img6],
   reception: [Img8, Img9, Img10, Img11],
 };
 
@@ -59,17 +59,17 @@ function Rooms() {
   const tabs = [
     { id: "ballroom", label: "Grand Ballroom and Foyer" },
     { id: "breakout", label: "Breakout Rooms and Coffee Break Area" },
-    { id: "secretariat", label: "Secretariat and Prayer Rooms" },
-    { id: "reception", label: "Lunch and Dinner Reception (Level G)" },
+    // { id: "secretariat", label: "Secretariat and Prayer Rooms" },
+    { id: "reception", label: "Lunch and Dinner Reception" },
   ];
 
   const roomDetails = {
     ballroom: { name: "Grand Ballroom and Foyer", floor: "Level 2" },
     breakout: {
       name: "Breakout Rooms and Coffee Break Area",
-      floor: "2nd Floor",
+      floor: "Level 30 (Yangtze, Amazon, Danube, Ganges, Chaopraya)",
     },
-    secretariat: { name: "Secretariat and Prayer Rooms", floor: "3rd Floor" },
+    // secretariat: { name: "Secretariat and Prayer Rooms", floor: "3rd Floor" },
     reception: {
       name: "Lunch and Dinner Reception (Level G)",
       floor: "Ground Floor",
