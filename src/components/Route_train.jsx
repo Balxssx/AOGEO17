@@ -3,6 +3,7 @@ import { Box, Typography, Button } from "@mui/material";
 import BTSTrainTimeline from "./BTSTrainTimeline";
 import MRTTrainTimeline from "./MRTTrainTimeline";
 import AOGEOIcon from "../assets/images/icon_AOGEO.png";
+import BKKRail from "../assets/images/BKKRail.webp";
 
 const tabs = [
   { id: "BTS", label: "BTS" },
@@ -167,6 +168,116 @@ function Route_train() {
           <MRTTrainTimeline />
         </>
       )}
+
+      <Box
+        sx={{
+          mt: 3,
+          px: 2,
+          py: 3,
+          backgroundColor: "#F3F6F9",
+          borderRadius: "16px",
+          border: "1px solid #E0E0E0",
+          textAlign: "center",
+        }}
+      >
+        <Box
+          component="img"
+          src={BKKRail}
+          alt="BKKRail"
+          sx={{
+            width: 64,
+            height: 64,
+            borderRadius: "20%",
+            mb: 1.5,
+            boxShadow: "0 4px 10px rgba(0, 0, 0, 0.1)",
+          }}
+        />
+        <Typography
+          variant="h6"
+          sx={{
+            fontFamily: "Work Sans",
+            fontWeight: 600,
+            fontSize: { xs: 16, md: 20 },
+            color: "#030304",
+            mb: 1,
+          }}
+        >
+          Want to explore more routes?
+        </Typography>
+        <Typography
+          sx={{
+            fontSize: 14,
+            fontFamily: "Work Sans",
+            color: "#555555",
+            mb: 2,
+          }}
+        >
+          Download the <strong>BKK Rail</strong> app to find bus routes,
+          schedules, and nearby stops easily.
+        </Typography>
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            gap: 2,
+            flexWrap: "wrap",
+          }}
+        >
+          <Button
+            variant="outlined"
+            sx={{
+              backgroundColor: "transparent",
+              border: "1px solid #030304",
+              borderRadius: "999px",
+              color: "#030304",
+              fontWeight: 600,
+              fontSize: 14,
+              textTransform: "none",
+              fontFamily: "Work Sans",
+              px: 2.5,
+              py: 1,
+              transition: "all 0.3s ease-in-out",
+              "&:hover": {
+                background:
+                  "linear-gradient(63deg, rgb(80, 49, 133) -14.73%, rgb(195, 162, 250) 92.2%)",
+                color: "#ffffff",
+                border: "1px solid #ffffff",
+              },
+            }}
+            href="https://play.google.com/store/apps/details?id=th.ac.mahidol.clare.gorail&hl=th"
+            target="_blank"
+          >
+            Download on Play Store
+          </Button>
+
+          <Button
+            variant="outlined"
+            sx={{
+              backgroundColor: "transparent",
+              border: "1px solid #030304",
+              borderRadius: "999px",
+              color: "#030304",
+              fontWeight: 600,
+              fontSize: 14,
+              textTransform: "none",
+              fontFamily: "Work Sans",
+              px: 2.5,
+              py: 1,
+              transition: "all 0.3s ease-in-out",
+              "&:hover": {
+                background:
+                  "linear-gradient(63deg, rgb(80, 49, 133) -14.73%, rgb(195, 162, 250) 92.2%)",
+                color: "#ffffff",
+                border: "1px solid #ffffff",
+              },
+            }}
+            href="https://apps.apple.com/th/app/bkk-rail/id1448681649"
+            target="_blank"
+          >
+            Download on App Store
+          </Button>
+        </Box>
+      </Box>
     </Box>
   );
 }
