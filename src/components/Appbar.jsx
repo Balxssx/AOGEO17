@@ -145,7 +145,7 @@ function ResponsiveAppBar() {
                   src={GISTDALogo}
                   alt="GISTDA Logo"
                   sx={{
-                    height: { xs: 14, sm: 18, md: 20 },
+                    height: { xs: 30, sm: 35, md: 40 },
                     width: "auto",
                   }}
                 />
