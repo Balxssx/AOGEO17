@@ -18,6 +18,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import { Link, useLocation } from "react-router-dom";
 import GEOLogo from "../assets/images/GEO_logo.svg";
 import AOGEOLogo from "../assets/images/AOGEO_logo.png";
+import GISTDALogo from "../assets/images/GISTDA_logo.png";
 import AOGEOIcon from "../assets/images/icon_AOGEO.png";
 
 const pages = [
@@ -130,6 +131,21 @@ function ResponsiveAppBar() {
                   alt="AOGEO Logo"
                   sx={{
                     height: { xs: 16, sm: 20, md: 25 },
+                    width: "auto",
+                  }}
+                />
+              </a>
+              <a
+                href="https://gistda.or.th/home.php"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Box
+                  component="img"
+                  src={GISTDALogo}
+                  alt="GISTDA Logo"
+                  sx={{
+                    height: { xs: 14, sm: 18, md: 20 },
                     width: "auto",
                   }}
                 />
